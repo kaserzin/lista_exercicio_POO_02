@@ -1,0 +1,36 @@
+package questao3;
+
+public class Produto {
+    private int codigo;
+    private String nome;
+    private double preco;
+    private int estoque;
+
+    public Produto(int codigo, String nome, double preco, int estoque) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.preco = preco;
+        this.estoque = estoque;
+    }
+    public int getCodigo() {
+        return codigo;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public double getPreco() {
+        return preco;
+    }
+
+    public int getEstoque() {
+        return estoque;
+    }
+    public void setPreco(double preco) {
+        if(preco >= 0) this.preco = preco;
+        else IO.println("Valor invalido! Informar valor positivo.");
+    }
+
+    public void exibirInfo(){
+        System.out.printf("\nCodigo: %d \nNome: %s\nPreco: %.1f\nEstoque: %n",  codigo, nome, preco, estoque);
+    }
+}
